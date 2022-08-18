@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body style ="background-image:url('https://www.whatsappimages.in/wp-content/uploads/2021/07/Black-Background-Images-Pics-Download.jpg'); background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
+
+<h1 style="color:green;">REGISTRATION</h1>
+<form action="register" method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="user_name" placeholder="enter username"><br>
+    <input type="text" name="first_name" placeholder="enter the first name"><br>
+    <input type="text" name="last_name" placeholder="enter the last name"><br>
+    <input type="email" name="email" placeholder="enter the email address"><br>
+    <input type="password" name="password" placeholder="enter the password"><br>
+    <input type="password" name="password1" placeholder="re-enter the password"><br>
+    <input type="submit">
+
+</form>
+
+{% for msgs in messages %}
+{{msgs}}
+{% endfor %}
+</body>
+</html>
